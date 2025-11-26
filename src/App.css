@@ -1,0 +1,221 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ==================== AUTH SECTION - DESKTOP ==================== */
+
+.auth-section-desktop {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 20px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: #ecf0f1;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.user-info:hover {
+  background: #d5dbdb;
+}
+
+.user-icon {
+  font-size: 18px;
+}
+
+.user-name {
+  color: #2c3e50;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.login-btn,
+.register-btn,
+.logout-btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.login-btn {
+  background: transparent;
+  color: #2c3e50;
+  border: 2px solid #2c3e50;
+}
+
+.login-btn:hover {
+  background: #2c3e50;
+  color: white;
+}
+
+.register-btn {
+  background: #3498db;
+  color: white;
+}
+
+.register-btn:hover {
+  background: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.logout-btn {
+  background: #e74c3c;
+  color: white;
+}
+
+.logout-btn:hover {
+  background: #c0392b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+}
+
+/* ==================== AUTH SECTION - MOBILE ==================== */
+
+.mobile-auth-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px 0;
+  border-top: 2px solid #ecf0f1;
+  margin-top: 15px;
+}
+
+.mobile-user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  background: #ecf0f1;
+  border-radius: 8px;
+}
+
+.mobile-logout-btn {
+  padding: 12px;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mobile-logout-btn:hover {
+  background: #c0392b;
+}
+
+.mobile-auth-link {
+  padding: 12px;
+  background: transparent;
+  color: #2c3e50;
+  border: 2px solid #2c3e50;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.mobile-auth-link:hover {
+  background: #2c3e50;
+  color: white;
+}
+
+.mobile-auth-link.primary {
+  background: #3498db;
+  color: white;
+  border-color: #3498db;
+}
+
+.mobile-auth-link.primary:hover {
+  background: #2980b9;
+  border-color: #2980b9;
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 768px) {
+  .auth-section-desktop {
+    display: none;
+  }
+
+  .user-name {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-auth-section {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-section-desktop {
+    gap: 8px;
+  }
+
+  .login-btn,
+  .register-btn,
+  .logout-btn {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+
+  .user-info {
+    padding: 6px 12px;
+  }
+
+  .user-name {
+    display: none;
+  }
+}

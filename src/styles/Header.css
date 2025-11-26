@@ -1,0 +1,479 @@
+/* src/styles/Header.css - COMPLETE WITH AUTH */
+
+.header {
+  background: #2c3e50;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Header Top */
+.header-top {
+  padding: 1rem 0;
+  background: #2c3e50;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Logo */
+.logo {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: opacity 0.2s;
+}
+
+.logo:hover {
+  opacity: 0.9;
+}
+
+.logo-icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.nav-icon {
+  font-size: 1.1rem;
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
+}
+
+.nav-link.active {
+  background: #fbbf24;
+  color: #1e3a8a;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(251, 191, 36, 0.3);
+}
+
+/* ==================== AUTH SECTION - DESKTOP ==================== */
+
+.auth-section-desktop {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 20px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.user-info:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.user-icon {
+  font-size: 18px;
+}
+
+.user-name {
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.login-btn,
+.register-btn,
+.logout-btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  display: inline-block;
+  text-align: center;
+}
+
+.login-btn {
+  background: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.login-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: white;
+}
+
+.register-btn {
+  background: #fbbf24;
+  color: #1e3a8a;
+  border: 2px solid #fbbf24;
+}
+
+.register-btn:hover {
+  background: #f59e0b;
+  border-color: #f59e0b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(251, 191, 36, 0.4);
+}
+
+.logout-btn {
+  background: #e74c3c;
+  color: white;
+  border: 2px solid #e74c3c;
+}
+
+.logout-btn:hover {
+  background: #c0392b;
+  border-color: #c0392b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.4);
+}
+
+/* ==================== AUTH SECTION - MOBILE ==================== */
+
+.mobile-auth-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px 0;
+  border-top: 2px solid rgba(255, 255, 255, 0.15);
+  margin-top: 15px;
+}
+
+.mobile-user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.mobile-logout-btn {
+  padding: 12px;
+  background: #e74c3c;
+  color: white;
+  border: 2px solid #e74c3c;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.mobile-logout-btn:hover {
+  background: #c0392b;
+  border-color: #c0392b;
+}
+
+.mobile-auth-link {
+  padding: 12px;
+  background: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.mobile-auth-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: white;
+}
+
+.mobile-auth-link.primary {
+  background: #fbbf24;
+  color: #1e3a8a;
+  border-color: #fbbf24;
+}
+
+.mobile-auth-link.primary:hover {
+  background: #f59e0b;
+  border-color: #f59e0b;
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+  display: none;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.mobile-menu-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+  background: rgba(0, 0, 0, 0.15);
+  padding: 0.75rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.breadcrumb-link {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.breadcrumb-link:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.breadcrumb-separator {
+  margin: 0 0.5rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.breadcrumb-current {
+  color: white;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* Save Trip Buttons */
+.save-trip-btn,
+.update-trip-btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  font-family: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.save-trip-btn {
+  background: #27ae60;
+  color: white;
+  animation: pulse 2s infinite;
+}
+
+.save-trip-btn:hover {
+  background: #229954;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(39, 174, 96, 0.4);
+}
+
+.update-trip-btn {
+  background: #f39c12;
+  color: white;
+}
+
+.update-trip-btn:hover {
+  background: #e67e22;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(243, 156, 18, 0.4);
+}
+
+/* Icon Styling - ADD TO END OF Header.css */
+
+/* Navigation Icons */
+.nav-icon {
+  font-size: 1.1rem;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* User Icon */
+.user-icon {
+  font-size: 18px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Button Icons */
+.save-trip-btn svg,
+.update-trip-btn svg,
+.logout-btn svg,
+.mobile-logout-btn svg {
+  margin-right: 6px;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+/* Mobile Menu Toggle Icons */
+.mobile-menu-toggle svg {
+  font-size: 1.5rem;
+  display: block;
+}
+
+/* Add these styles to your existing Header.css file */
+
+/* Currency Toggle in Desktop Header */
+.auth-section-desktop {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* Add spacing between currency toggle and other buttons */
+}
+
+/* Mobile Currency Section */
+.mobile-currency-section {
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Ensure currency toggle is visible in mobile menu */
+@media (max-width: 768px) {
+  .auth-section-desktop .currency-toggle-container {
+    display: none; /* Hide desktop currency toggle on mobile */
+  }
+  
+  .mobile-currency-section .currency-toggle-container {
+    display: flex; /* Show mobile currency toggle */
+  }
+}
+
+/* Desktop: Show currency toggle */
+@media (min-width: 769px) {
+  .mobile-currency-section {
+    display: none; /* Hide mobile currency section on desktop */
+  }
+}
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(39, 174, 96, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(39, 174, 96, 0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .save-trip-btn,
+  .update-trip-btn {
+    display: none;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .header-content {
+    padding: 0 0.75rem;
+  }
+
+  .logo h1 {
+    font-size: 1rem;
+  }
+
+  .logo-icon {
+    font-size: 1.25rem;
+  }
+
+  .mobile-menu-toggle {
+    font-size: 1.25rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .user-name {
+    display: block;
+  }
+}
+
+/* Smooth scrolling for sticky header */
+html {
+  scroll-padding-top: 80px;
+}
+@media (max-width: 1024px) {
+  .header-content {
+    padding: 0 1rem;
+  }
+
+  .logo h1 {
+    font-size: 1.3rem;
+  }
+
+  .nav {
+    gap: 0.25rem;
+  }
+
+  .nav-link {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .auth-section-desktop {
+    gap: 8px;
+    margin-left: 15px;
+  }
+
+  .login-btn,
+  .register-btn,
+  .logout-btn {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  .user-info {
+    padding: 6px 12px;
+  }
+
+  .user-name {
+    font-size: 13px;
+  }
+}
+
