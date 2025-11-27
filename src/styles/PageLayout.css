@@ -683,3 +683,67 @@
     display: block;
   }
 }
+
+/* Add these icon styles to your existing PageLayout.css */
+
+/* Sidebar Header Icons */
+.sidebar-icon {
+  font-size: 1.1rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+/* Mobile Button Icons */
+.mobile-sidebar-btn .btn-icon {
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.mobile-sidebar-btn .btn-label {
+  font-size: 0.75rem;
+  display: block;
+}
+
+/* Collapse Button Icons */
+.collapse-btn svg {
+  font-size: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.collapse-btn:hover svg {
+  transform: scale(1.1);
+}
+
+/* Close Button Icon */
+.close-mobile-btn svg {
+  font-size: 1.2rem;
+}
+
+/* Scroll to Top Button Icon */
+.scroll-to-top svg {
+  font-size: 1.2rem;
+}
+
+/* Ensure icons are centered */
+.mobile-sidebar-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+/* Animation for icons */
+.mobile-sidebar-btn.active .btn-icon {
+  animation: pulse 0.5s ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}

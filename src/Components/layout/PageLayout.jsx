@@ -1,8 +1,16 @@
-// src/components/layout/PageLayout.jsx - ENHANCED VERSION
+// src/components/layout/PageLayout.jsx - WITH PROFESSIONAL ICONS
 import React, { useState, useEffect } from 'react';
 import ExpenseTracker from '../common/ExpenseTracker';
 import ItineraryPlanner from '../common/ItineraryPlanner';
 import { useTripContext } from '../../context/TripContext';
+import { 
+  FaWallet, 
+  FaCalendarAlt, 
+  FaChevronLeft, 
+  FaChevronRight,
+  FaTimes,
+  FaArrowUp
+} from 'react-icons/fa';
 import '../../styles/PageLayout.css';
 
 const PageLayout = ({ children }) => {
@@ -62,7 +70,7 @@ const PageLayout = ({ children }) => {
             onClick={() => toggleMobileSidebar('left')}
             aria-label="Toggle budget tracker"
           >
-            <span className="btn-icon">💰</span>
+            <FaWallet className="btn-icon" />
             <span className="btn-label">Budget</span>
           </button>
           
@@ -72,7 +80,7 @@ const PageLayout = ({ children }) => {
               onClick={() => toggleMobileSidebar('right')}
               aria-label="Toggle itinerary"
             >
-              <span className="btn-icon">📅</span>
+              <FaCalendarAlt className="btn-icon" />
               <span className="btn-label">Itinerary</span>
               <span className="notification-badge">{
                 (tripPlan.flights?.length || 0) + 
@@ -102,7 +110,7 @@ const PageLayout = ({ children }) => {
       >
         <div className="sidebar-header">
           <h2 className="sidebar-title">
-            💰 Budget Tracker
+            <FaWallet className="sidebar-icon" /> Budget Tracker
           </h2>
           {!isMobile && (
             <button 
@@ -111,7 +119,7 @@ const PageLayout = ({ children }) => {
               aria-label={leftSidebarCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
               title={leftSidebarCollapsed ? 'Expand' : 'Collapse'}
             >
-              {leftSidebarCollapsed ? '→' : '←'}
+              {leftSidebarCollapsed ? <FaChevronRight /> : <FaChevronLeft />}
             </button>
           )}
           {isMobile && (
@@ -120,7 +128,7 @@ const PageLayout = ({ children }) => {
               onClick={() => setShowMobileSidebar(null)}
               aria-label="Close sidebar"
             >
-              ✕
+              <FaTimes />
             </button>
           )}
         </div>
@@ -148,7 +156,7 @@ const PageLayout = ({ children }) => {
       >
         <div className="sidebar-header">
           <h2 className="sidebar-title">
-            📅 Your Itinerary
+            <FaCalendarAlt className="sidebar-icon" /> Your Itinerary
           </h2>
           {!isMobile && (
             <button 
@@ -157,7 +165,7 @@ const PageLayout = ({ children }) => {
               aria-label={rightSidebarCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
               title={rightSidebarCollapsed ? 'Expand' : 'Collapse'}
             >
-              {rightSidebarCollapsed ? '←' : '→'}
+              {rightSidebarCollapsed ? <FaChevronLeft /> : <FaChevronRight />}
             </button>
           )}
           {isMobile && (
@@ -166,7 +174,7 @@ const PageLayout = ({ children }) => {
               onClick={() => setShowMobileSidebar(null)}
               aria-label="Close sidebar"
             >
-              ✕
+              <FaTimes />
             </button>
           )}
         </div>
@@ -213,7 +221,7 @@ const ScrollToTopButton = () => {
       onClick={scrollToTop}
       aria-label="Scroll to top"
     >
-      ↑
+      <FaArrowUp />
     </button>
   );
 };

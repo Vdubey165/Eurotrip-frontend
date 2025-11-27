@@ -1,6 +1,19 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import {
+  FaUser,
+  FaEnvelope,
+  FaLock,
+  FaEye,
+  FaEyeSlash,
+  FaExclamationCircle,
+  FaPlane,
+  FaWallet,
+  FaCalendarAlt,
+  FaShield,
+  FaMobileAlt
+} from 'react-icons/fa';
 import '../styles/Auth.css';
 
 const Register = () => {
@@ -60,13 +73,15 @@ const Register = () => {
 
         {error && (
           <div className="error-message">
-            <span>⚠️</span> {error}
+            <FaExclamationCircle /> {error}
           </div>
         )}
 
         <form onSubmit={handleSubmit} className="auth-form">
           <div className="form-group">
-            <label htmlFor="name">Full Name</label>
+            <label htmlFor="name">
+              <FaUser className="input-icon" /> Full Name
+            </label>
             <input
               type="text"
               id="name"
@@ -79,7 +94,9 @@ const Register = () => {
           </div>
 
           <div className="form-group">
-            <label htmlFor="email">Email Address</label>
+            <label htmlFor="email">
+              <FaEnvelope className="input-icon" /> Email Address
+            </label>
             <input
               type="email"
               id="email"
@@ -92,7 +109,9 @@ const Register = () => {
           </div>
 
           <div className="form-group">
-            <label htmlFor="password">Password</label>
+            <label htmlFor="password">
+              <FaLock className="input-icon" /> Password
+            </label>
             <div className="password-input">
               <input
                 type={showPassword ? 'text' : 'password'}
@@ -108,14 +127,16 @@ const Register = () => {
                 className="toggle-password"
                 onClick={() => setShowPassword(!showPassword)}
               >
-                {showPassword ? '👁️' : '👁️‍🗨️'}
+                {showPassword ? <FaEyeSlash /> : <FaEye />}
               </button>
             </div>
             <small className="hint">Must be at least 6 characters</small>
           </div>
 
           <div className="form-group">
-            <label htmlFor="confirmPassword">Confirm Password</label>
+            <label htmlFor="confirmPassword">
+              <FaLock className="input-icon" /> Confirm Password
+            </label>
             <input
               type={showPassword ? 'text' : 'password'}
               id="confirmPassword"
@@ -147,11 +168,11 @@ const Register = () => {
       <div className="auth-features">
         <h3>What you'll get:</h3>
         <ul>
-          <li>✈️ Plan unlimited trips</li>
-          <li>💰 Smart budget tracking</li>
-          <li>📅 Day-wise itinerary builder</li>
-          <li>🔒 Secure & private</li>
-          <li>📱 Access from any device</li>
+          <li><FaPlane className="feature-icon" /> Plan unlimited trips</li>
+          <li><FaWallet className="feature-icon" /> Smart budget tracking</li>
+          <li><FaCalendarAlt className="feature-icon" /> Day-wise itinerary builder</li>
+          <li><FaShield className="feature-icon" /> Secure & private</li>
+          <li><FaMobileAlt className="feature-icon" /> Access from any device</li>
         </ul>
       </div>
     </div>

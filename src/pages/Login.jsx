@@ -1,6 +1,17 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import {
+  FaEnvelope,
+  FaLock,
+  FaEye,
+  FaEyeSlash,
+  FaExclamationCircle,
+  FaDatabase,
+  FaChartBar,
+  FaMapMarkerAlt,
+  FaSync
+} from 'react-icons/fa';
 import '../styles/Auth.css';
 
 const Login = () => {
@@ -11,7 +22,6 @@ const Login = () => {
     email: '',
     password: ''
   });
-
   const [showPassword, setShowPassword] = useState(false);
 
   const handleChange = (e) => {
@@ -47,13 +57,15 @@ const Login = () => {
 
         {error && (
           <div className="error-message">
-            <span>⚠️</span> {error}
+            <FaExclamationCircle /> {error}
           </div>
         )}
 
         <form onSubmit={handleSubmit} className="auth-form">
           <div className="form-group">
-            <label htmlFor="email">Email Address</label>
+            <label htmlFor="email">
+              <FaEnvelope className="input-icon" /> Email Address
+            </label>
             <input
               type="email"
               id="email"
@@ -66,7 +78,9 @@ const Login = () => {
           </div>
 
           <div className="form-group">
-            <label htmlFor="password">Password</label>
+            <label htmlFor="password">
+              <FaLock className="input-icon" /> Password
+            </label>
             <div className="password-input">
               <input
                 type={showPassword ? 'text' : 'password'}
@@ -82,7 +96,7 @@ const Login = () => {
                 className="toggle-password"
                 onClick={() => setShowPassword(!showPassword)}
               >
-                {showPassword ? '👁️' : '👁️‍🗨️'}
+                {showPassword ? <FaEyeSlash /> : <FaEye />}
               </button>
             </div>
           </div>
@@ -107,10 +121,10 @@ const Login = () => {
       <div className="auth-features">
         <h3>Why login?</h3>
         <ul>
-          <li>💾 Save your trip plans</li>
-          <li>📊 Track your budget across devices</li>
-          <li>✈️ Access your itinerary anywhere</li>
-          <li>🔄 Sync across all your devices</li>
+          <li><FaDatabase className="feature-icon" /> Save your trip plans</li>
+          <li><FaChartBar className="feature-icon" /> Track your budget across devices</li>
+          <li><FaMapMarkerAlt className="feature-icon" /> Access your itinerary anywhere</li>
+          <li><FaSync className="feature-icon" /> Sync across all your devices</li>
         </ul>
       </div>
     </div>
