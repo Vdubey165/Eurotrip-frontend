@@ -1,4 +1,4 @@
-/* src/styles/Header.css - COMPLETE WITH AUTH */
+/* src/styles/Header.css - MOBILE RESPONSIVE VERSION */
 
 .header {
   background: #2c3e50;
@@ -32,6 +32,7 @@
   align-items: center;
   gap: 0.75rem;
   transition: opacity 0.2s;
+  z-index: 101;
 }
 
 .logo:hover {
@@ -50,7 +51,7 @@
   letter-spacing: -0.5px;
 }
 
-/* Navigation */
+/* Navigation - Desktop */
 .nav {
   display: flex;
   gap: 0.5rem;
@@ -85,8 +86,7 @@
   box-shadow: 0 2px 8px rgba(251, 191, 36, 0.3);
 }
 
-/* ==================== AUTH SECTION - DESKTOP ==================== */
-
+/* Auth Section - Desktop */
 .auth-section-desktop {
   display: flex;
   align-items: center;
@@ -173,8 +173,26 @@
   box-shadow: 0 4px 12px rgba(231, 76, 60, 0.4);
 }
 
-/* ==================== AUTH SECTION - MOBILE ==================== */
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+  display: none;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  z-index: 101;
+}
 
+.mobile-menu-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Mobile Auth Section */
 .mobile-auth-section {
   display: flex;
   flex-direction: column;
@@ -239,52 +257,13 @@
   border-color: #f59e0b;
 }
 
-/* Mobile Menu Toggle */
-.mobile-menu-toggle {
+/* Currency Toggle Sections */
+.mobile-currency-section {
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 16px;
   display: none;
-  background: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  color: white;
-  font-size: 1.5rem;
-  padding: 0.5rem 0.75rem;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.mobile-menu-toggle:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.5);
-}
-
-/* Breadcrumbs */
-.breadcrumbs {
-  background: rgba(0, 0, 0, 0.15);
-  padding: 0.75rem 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.breadcrumb-link {
-  color: rgba(255, 255, 255, 0.8);
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: color 0.2s;
-}
-
-.breadcrumb-link:hover {
-  color: white;
-  text-decoration: underline;
-}
-
-.breadcrumb-separator {
-  margin: 0 0.5rem;
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.breadcrumb-current {
-  color: white;
-  font-weight: 500;
-  font-size: 0.9rem;
+  justify-content: center;
 }
 
 /* Save Trip Buttons */
@@ -326,73 +305,6 @@
   box-shadow: 0 4px 12px rgba(243, 156, 18, 0.4);
 }
 
-/* Icon Styling - ADD TO END OF Header.css */
-
-/* Navigation Icons */
-.nav-icon {
-  font-size: 1.1rem;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-/* User Icon */
-.user-icon {
-  font-size: 18px;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-/* Button Icons */
-.save-trip-btn svg,
-.update-trip-btn svg,
-.logout-btn svg,
-.mobile-logout-btn svg {
-  margin-right: 6px;
-  font-size: 14px;
-  vertical-align: middle;
-}
-
-/* Mobile Menu Toggle Icons */
-.mobile-menu-toggle svg {
-  font-size: 1.5rem;
-  display: block;
-}
-
-/* Add these styles to your existing Header.css file */
-
-/* Currency Toggle in Desktop Header */
-.auth-section-desktop {
-  display: flex;
-  align-items: center;
-  gap: 16px; /* Add spacing between currency toggle and other buttons */
-}
-
-/* Mobile Currency Section */
-.mobile-currency-section {
-  padding: 16px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  margin-bottom: 16px;
-  display: flex;
-  justify-content: center;
-}
-
-/* Ensure currency toggle is visible in mobile menu */
-@media (max-width: 768px) {
-  .auth-section-desktop .currency-toggle-container {
-    display: none; /* Hide desktop currency toggle on mobile */
-  }
-  
-  .mobile-currency-section .currency-toggle-container {
-    display: flex; /* Show mobile currency toggle */
-  }
-}
-
-/* Desktop: Show currency toggle */
-@media (min-width: 769px) {
-  .mobile-currency-section {
-    display: none; /* Hide mobile currency section on desktop */
-  }
-}
 @keyframes pulse {
   0%, 100% {
     box-shadow: 0 0 0 0 rgba(39, 174, 96, 0.7);
@@ -402,42 +314,39 @@
   }
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .save-trip-btn,
-  .update-trip-btn {
-    display: none;
-  }
+/* Breadcrumbs */
+.breadcrumbs {
+  background: rgba(0, 0, 0, 0.15);
+  padding: 0.75rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Small Mobile */
-@media (max-width: 480px) {
-  .header-content {
-    padding: 0 0.75rem;
-  }
-
-  .logo h1 {
-    font-size: 1rem;
-  }
-
-  .logo-icon {
-    font-size: 1.25rem;
-  }
-
-  .mobile-menu-toggle {
-    font-size: 1.25rem;
-    padding: 0.4rem 0.6rem;
-  }
-
-  .user-name {
-    display: block;
-  }
+.breadcrumb-link {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
 }
 
-/* Smooth scrolling for sticky header */
-html {
-  scroll-padding-top: 80px;
+.breadcrumb-link:hover {
+  color: white;
+  text-decoration: underline;
 }
+
+.breadcrumb-separator {
+  margin: 0 0.5rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.breadcrumb-current {
+  color: white;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* ==================== RESPONSIVE BREAKPOINTS ==================== */
+
+/* Tablet & Below (1024px) */
 @media (max-width: 1024px) {
   .header-content {
     padding: 0 1rem;
@@ -477,3 +386,146 @@ html {
   }
 }
 
+/* Mobile Navigation (768px) */
+@media (max-width: 768px) {
+  .header-content {
+    padding: 0 1rem;
+  }
+
+  /* Show mobile menu toggle */
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  /* Hide desktop navigation */
+  .nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80%;
+    max-width: 320px;
+    height: 100vh;
+    background: #2c3e50;
+    flex-direction: column;
+    gap: 0;
+    padding: 5rem 1rem 1rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+    z-index: 100;
+  }
+
+  .nav.mobile-open {
+    transform: translateX(0);
+  }
+
+  .nav-link {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0;
+    justify-content: flex-start;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: none;
+  }
+
+  /* Hide desktop auth, show mobile auth */
+  .auth-section-desktop {
+    display: none;
+  }
+
+  .mobile-auth-section {
+    display: flex;
+  }
+
+  .mobile-currency-section {
+    display: flex;
+  }
+
+  /* Hide desktop currency toggle */
+  .auth-section-desktop .currency-toggle-container {
+    display: none;
+  }
+
+  /* Hide save/update buttons on mobile */
+  .save-trip-btn,
+  .update-trip-btn {
+    display: none;
+  }
+
+  /* Mobile overlay */
+  .mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+    display: none;
+  }
+
+  .mobile-menu-overlay.active {
+    display: block;
+  }
+}
+
+/* Small Mobile (480px) */
+@media (max-width: 480px) {
+  .header-content {
+    padding: 0 0.75rem;
+  }
+
+  .logo h1 {
+    font-size: 1.1rem;
+  }
+
+  .logo-icon {
+    font-size: 1.5rem;
+  }
+
+  .mobile-menu-toggle {
+    font-size: 1.25rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .nav {
+    width: 90%;
+    max-width: 280px;
+  }
+
+  .nav-link {
+    padding: 0.875rem;
+    font-size: 0.9rem;
+  }
+
+  .mobile-auth-link,
+  .mobile-logout-btn {
+    padding: 10px;
+    font-size: 13px;
+  }
+}
+
+/* Extra Small Mobile (375px) */
+@media (max-width: 375px) {
+  .logo h1 {
+    font-size: 1rem;
+  }
+
+  .logo-icon {
+    font-size: 1.35rem;
+  }
+
+  .nav {
+    width: 100%;
+  }
+}
+
+/* Smooth scrolling for sticky header */
+html {
+  scroll-padding-top: 80px;
+}
