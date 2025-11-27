@@ -409,7 +409,9 @@
   .hero-title {
     font-size: 1.8rem;
   }
-  
+  .hero-subtitle{
+    margin-bottom: 1rem;
+  }
   .banner-container {
     height: 400px;
   }
