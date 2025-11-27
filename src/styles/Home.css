@@ -405,7 +405,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 400px) {
   .hero-title {
     font-size: 1.8rem;
   }

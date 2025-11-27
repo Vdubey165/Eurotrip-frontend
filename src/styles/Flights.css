@@ -809,7 +809,7 @@
 }
 
 /* Small Mobile (375px - 479px) */
-@media (max-width: 479px) {
+@media (max-width: 400px) {
   .flights-page {
     padding: 0.5rem;
   }

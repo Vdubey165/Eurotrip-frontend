@@ -475,7 +475,7 @@
 }
 
 /* Small Mobile (480px) */
-@media (max-width: 480px) {
+@media (max-width: 400px) {
   .header-content {
     padding: 0 0.75rem;
   }
