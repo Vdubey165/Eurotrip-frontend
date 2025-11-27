@@ -42,7 +42,7 @@ const Header = () => {
       <div className="header-top">
         <div className="header-content">
           <Link to="/" className="logo" onClick={() => setMobileMenuOpen(false)}>
-            <span className="logo-icon">🇪🇺</span>
+            
             <h1>Euroma</h1>
           </Link>
           
