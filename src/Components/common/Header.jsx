@@ -43,7 +43,7 @@ const Header = () => {
         <div className="header-content">
           <Link to="/" className="logo" onClick={() => setMobileMenuOpen(false)}>
             <span className="logo-icon">🇪🇺</span>
-            <h1>Europe Travel Planner</h1>
+            <h1>Euroma</h1>
           </Link>
           
           <nav className={`nav ${mobileMenuOpen ? 'mobile-open' : ''}`}>
