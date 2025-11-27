@@ -197,12 +197,12 @@
 
 .auth-features li {
   color: #555;
-  padding: 12px 0;
+  padding: 16px 0;
   border-bottom: 1px solid #f0f0f0;
   font-size: 15px;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
 }
 
 .auth-features li:last-child {
@@ -210,12 +210,15 @@
 }
 
 .feature-icon {
-  font-size: 18px;
+  font-size: 22px;
   color: #3498db;
-  min-width: 24px;
+  min-width: 28px;
+  width: 28px;
+  height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 /* Responsive */
