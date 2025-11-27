@@ -11,7 +11,7 @@ import {
   FaPlane,
   FaWallet,
   FaCalendarAlt,
-  FaShield,
+  FaShieldAlt,
   FaMobileAlt
 } from 'react-icons/fa';
 import '../styles/Auth.css';
