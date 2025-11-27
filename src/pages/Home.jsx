@@ -38,7 +38,7 @@ const Home = () => {
 
       {/* Four Options in Row */}
       <div className="options-section">
-        <h2 className="section-title">What Would You Like To Do?</h2>
+       
         <div className="options-grid">
           <Link to="/flights" className="option-card">
             <div className="card-icon-wrapper">
