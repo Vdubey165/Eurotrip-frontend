@@ -171,7 +171,7 @@ const Register = () => {
           <li><FaPlane className="feature-icon" /> Plan unlimited trips</li>
           <li><FaWallet className="feature-icon" /> Smart budget tracking</li>
           <li><FaCalendarAlt className="feature-icon" /> Day-wise itinerary builder</li>
-          <li><FaShield className="feature-icon" /> Secure & private</li>
+          <li><FaShieldAlt className="feature-icon" /> Secure & private</li>
           <li><FaMobileAlt className="feature-icon" /> Access from any device</li>
         </ul>
       </div>
